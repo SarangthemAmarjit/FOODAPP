@@ -20,7 +20,7 @@ class ItemModalAdapter extends TypeAdapter<ItemModal> {
       id: fields[0] as String,
       qty: fields[1] as int,
       price: fields[2] as double,
-      itemimage: fields[3] as Container,
+      itemimage: fields[3] as String,
       itemname: fields[4] as String,
     );
   }

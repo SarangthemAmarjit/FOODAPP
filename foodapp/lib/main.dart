@@ -12,7 +12,7 @@ void main() async {
   final Document1 = await getApplicationDocumentsDirectory();
   Hive.init(Document1.path);
   Hive.registerAdapter(ItemModalAdapter());
-  Hive.openBox<ItemModal>(BoxName);
+  await Hive.openBox<ItemModal>(BoxName);
   runApp(MyApp());
 }
 
@@ -41,8 +41,9 @@ class _FoodAppState extends State<FoodApp> {
   Box<ItemModal>? finalbox;
 
   @override
-  void initState() {
+  initState() {
     super.initState();
+
     finalbox = Hive.box<ItemModal>(BoxName);
   }
 
@@ -50,8 +51,8 @@ class _FoodAppState extends State<FoodApp> {
     HomePage1(),
     Text('SEARCH'),
     Text('NOTIFICATION'),
-    Mycarditem(boxnew: null!),
-    Text('ACCOUNT'),
+    Mycarditem(),
+    const Text('ACCOUNT'),
   ];
   int currentselectedindex = 0;
 

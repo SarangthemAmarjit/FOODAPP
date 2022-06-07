@@ -49,7 +49,7 @@ class _MyWidgetState extends State<HomePage1> {
                             additem: Button(
                                 idnumber: '92140',
                                 itemprice: 169.5,
-                                itemphoto: apple,
+                                itemphoto: 'assets/images/apple2.jpg',
                                 itname: 'Apple')),
                         CardContainer(
                           iconcolor: Colors.redAccent,
@@ -65,7 +65,7 @@ class _MyWidgetState extends State<HomePage1> {
                           additem: Button(
                               idnumber: '92145',
                               itemprice: 200,
-                              itemphoto: chicken,
+                              itemphoto: 'assets/images/chiken4.jpg',
                               itname: 'Chicken'),
                         ),
                         CardContainer(
@@ -82,7 +82,7 @@ class _MyWidgetState extends State<HomePage1> {
                           additem: Button(
                               idnumber: '92150',
                               itemprice: 245,
-                              itemphoto: nutella,
+                              itemphoto: 'assets/images/nutella.jpg',
                               itname: 'Nutella'),
                         ),
                         CardContainer(
@@ -99,7 +99,7 @@ class _MyWidgetState extends State<HomePage1> {
                           additem: Button(
                               idnumber: '92155',
                               itemprice: 35,
-                              itemphoto: wheat,
+                              itemphoto: 'assets/images/bread.jpg',
                               itname: 'Whole wheat'),
                         ),
                       ],

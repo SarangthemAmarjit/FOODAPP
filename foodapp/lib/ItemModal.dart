@@ -3,7 +3,7 @@ import 'package:hive/hive.dart';
 
 part 'ItemModal.g.dart';
 
-@HiveType(typeId: 1)
+@HiveType(typeId: 0)
 class ItemModal {
   @HiveField(0)
   final String id;
@@ -12,7 +12,7 @@ class ItemModal {
   @HiveField(2)
   final double price;
   @HiveField(3)
-  final Container itemimage;
+  final String itemimage;
   @HiveField(4)
   final String itemname;
 
