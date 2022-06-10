@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:foodapp/button.dart';
-import 'package:foodapp/constant.dart';
 import 'package:foodapp/item.dart';
 
 class HomePage1 extends StatefulWidget {
@@ -11,11 +10,15 @@ class HomePage1 extends StatefulWidget {
 }
 
 class _MyWidgetState extends State<HomePage1> {
+  GlobalKey<_MyWidgetState> _keynew1 = GlobalKey<_MyWidgetState>();
+  GlobalKey<_MyWidgetState> _keynew2 = GlobalKey<_MyWidgetState>();
+  GlobalKey<_MyWidgetState> _keynew3 = GlobalKey<_MyWidgetState>();
+  GlobalKey<_MyWidgetState> _keynew4 = GlobalKey<_MyWidgetState>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('Deals of the Weak'),
+          title: const Text('Deals of the Weak'),
           centerTitle: true,
         ),
         body: Container(
@@ -36,6 +39,7 @@ class _MyWidgetState extends State<HomePage1> {
                       shrinkWrap: true,
                       children: [
                         CardContainer(
+                            key: _keynew1,
                             iconcolor: Color.fromARGB(255, 98, 171, 100),
                             textweight: '500gm',
                             itemimage: 'assets/images/apple2.jpg',
@@ -46,12 +50,13 @@ class _MyWidgetState extends State<HomePage1> {
                             text5: '169.5',
                             text6: 'Standard Delivery',
                             text7: '( Tommorrow evening )',
-                            additem: Button(
+                            additem: QuantityButton(
                                 idnumber: '92140',
                                 itemprice: 169.5,
                                 itemphoto: 'assets/images/apple2.jpg',
                                 itname: 'Apple')),
                         CardContainer(
+                          key: _keynew2,
                           iconcolor: Colors.redAccent,
                           textweight: '1kg',
                           itemimage: 'assets/images/chiken4.jpg',
@@ -62,13 +67,14 @@ class _MyWidgetState extends State<HomePage1> {
                           text5: '200',
                           text6: 'Express Delivery',
                           text7: '( Tommorrow morning )',
-                          additem: Button(
+                          additem: QuantityButton(
                               idnumber: '92145',
                               itemprice: 200,
                               itemphoto: 'assets/images/chiken4.jpg',
                               itname: 'Chicken'),
                         ),
                         CardContainer(
+                          key: _keynew3,
                           iconcolor: Color.fromARGB(255, 98, 171, 100),
                           textweight: '500gm',
                           itemimage: 'assets/images/nutella.jpg',
@@ -79,13 +85,14 @@ class _MyWidgetState extends State<HomePage1> {
                           text5: 'Rs 245',
                           text6: 'Express Delivery',
                           text7: '( Tommorrow morning )',
-                          additem: Button(
+                          additem: QuantityButton(
                               idnumber: '92150',
                               itemprice: 245,
                               itemphoto: 'assets/images/nutella.jpg',
                               itname: 'Nutella'),
                         ),
                         CardContainer(
+                          key: _keynew4,
                           iconcolor: Color.fromARGB(255, 98, 171, 100),
                           textweight: '100gm',
                           itemimage: 'assets/images/bread.jpg',
@@ -96,7 +103,7 @@ class _MyWidgetState extends State<HomePage1> {
                           text5: '35',
                           text6: 'Standard Delivery',
                           text7: '( Tommorrow evening )',
-                          additem: Button(
+                          additem: QuantityButton(
                               idnumber: '92155',
                               itemprice: 35,
                               itemphoto: 'assets/images/bread.jpg',

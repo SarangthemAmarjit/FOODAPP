@@ -8,7 +8,7 @@ class ItemModal {
   @HiveField(0)
   final String id;
   @HiveField(1)
-  final int qty;
+  int qty;
   @HiveField(2)
   final double price;
   @HiveField(3)
